@@ -1,0 +1,64 @@
+{
+  "name": "mtui-vue",
+  "version": "0.0.2",
+  "description": "基于vue的ui库",
+  "main": "dist/index.umd.js",
+  "keywords": [
+    "vue"
+  ],
+  "author": "Lacey",
+  "files": [
+    "dist",
+    "components"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "npm run buildjs && npm run buildcss",
+    "lint": "vue-cli-service lint",
+    "buildjs": "webpack --config ./webpack.component.js",
+    "buildcss": "npx gulp sass",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.19",
+    "@vue/cli-plugin-eslint": "~4.5.19",
+    "@vue/cli-service": "~4.5.19",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "gulp": "^4.0.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^7.0.1",
+    "sass": "^1.54.4",
+    "sass-loader": "^5.0.1",
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.9.7",
+    "webpack-cli": "^4.10.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

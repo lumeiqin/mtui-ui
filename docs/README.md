@@ -4,13 +4,13 @@
 
 ### 1、安装组件库
 
-```
+``` bash
 npm install mtui-vue
 ```
 
 ### 2、引入组件库
 
-``` javscript
+```js
 // 全部引入
 import "mtui-vue/dist/css/index.css";
 import MTUI from "mtui-vue";
