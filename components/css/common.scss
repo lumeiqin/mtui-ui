@@ -25,16 +25,44 @@ html, body {
 
 /**
 	* 计算适配比
-	* @param {Number} $column 列数
-	* @param {String} $distance 列之间的距离（不加单位，默认为0）
+	* @param {Number} $px 尺寸
 */
 @function vw($px) {
-  @if $px == 0 {
-    @return 0;
+  @return $px/375*100vw;
+}
+
+/**
+	* 字体全家桶
+	* @param {String} $size 字体大小（加单位，默认为15px）
+	* @param {String} $lineHeight 行高（加单位，默认为15px）
+	* @param {String} $weight 字体粗细（默认为normal）
+	* @param {String} $style 字体风格（默认为normal）
+	* @param {String} $family 字体类型（默认为Sans-serif）
+*/
+@mixin font-set($size: 15px,$lineHeight: 15px, $weight: normal, $style: normal, $family: Sans-serif) {
+  font: {
+    size: vw($size);
+    weight: $weight;
+    style: $style;
+    family: $family;
+  }
+  line-height: vw($lineHeight);
+}
+
+@mixin font-color($type: title) {
+  @if $type == "title" {
+    color: #252525;
+  } @else if $type == "subtitle" {
+    color: #737373;
+  } @else if $type == "paragraph" {
+    color: #b2b2b2;
   } @else {
-    @return calc(#{$px} / 3.75) + vw;
+    color: #252525;
   }
 }
+
+
+
 
 /**
 	* 一行多列
@@ -59,35 +87,6 @@ html, body {
   height: vw($size);
 }
 
-/**
-	* 字体全家桶
-	* @param {String} $size 字体大小（加单位，默认为30rpx）
-	* @param {String} $lineHeight 行高（加单位，默认为30rpx）
-	* @param {String} $weight 字体粗细（默认为normal）
-	* @param {String} $style 字体风格（默认为normal）
-	* @param {String} $family 字体类型（默认为Sans-serif）
-*/
-@mixin font-set($size: 30rpx,$lineHeight: 30rpx, $weight: normal, $style: normal, $family: Sans-serif) {
-  font: {
-    size: $size;
-    weight: $weight;
-    style: $style;
-    family: $family;
-  }
-  line-height: $lineHeight;
-}
-
-@mixin font-color($type: title) {
-  @if $type == "title" {
-    color: #252525;
-  } @else if $type == "subtitle" {
-    color: #737373;
-  } @else if $type == "paragraph" {
-    color: #b2b2b2;
-  } @else {
-    color: #252525;
-  }
-}
 
 @mixin setThemeColor($key: color) {
   #{$key}: $themecolor;

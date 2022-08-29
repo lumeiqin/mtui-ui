@@ -9,6 +9,10 @@ import mtBox from "../components/lib/mt-box/index.js"
 Vue.component("mtBox", mtBox)
 Vue.use(mtBox)
 
+import mtText from "../components/lib/mt-text/index.js"
+Vue.component("mtText", mtText)
+Vue.use(mtText)
+
 
 Vue.config.productionTip = false
 new Vue({

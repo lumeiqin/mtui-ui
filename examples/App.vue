@@ -1,7 +1,50 @@
 <template>
-  <mtBox bg="#e7f1f5" flip="true" border="true">
-    123123
-  </mtBox>
+  <div>
+    <mtBox bg="#e7f1f5" border="true">
+      <mt-text>
+        金城留旬浃，兀兀醉歌舞。
+        出门览民风，惨惨愁肺腑。
+        去年夏秋旱，七月黍穟吐。
+        一昔营幕来，天明但平土。
+      </mt-text>
+    </mtBox>
+    <br>
+    <mtBox bg="#e7f1f5" border="true">
+      <mt-text type="diy" fw="900" color="red" lh="50px" size="4.8vw">
+        金城留旬浃，兀兀醉歌舞。
+        出门览民风，惨惨愁肺腑。
+        去年夏秋旱，七月黍穟吐。
+        一昔营幕来，天明但平土。
+      </mt-text>
+    </mtBox>
+    <br>
+    <mtBox bg="#e7f1f5" border="true">
+      <mt-text type="title">
+        金城留旬浃，兀兀醉歌舞。
+        出门览民风，惨惨愁肺腑。
+        去年夏秋旱，七月黍穟吐。
+        一昔营幕来，天明但平土。
+      </mt-text>
+    </mtBox>
+    <br>
+    <mtBox bg="#e7f1f5" border="true">
+      <mt-text type="subtitle">
+        金城留旬浃，兀兀醉歌舞。
+        出门览民风，惨惨愁肺腑。
+        去年夏秋旱，七月黍穟吐。
+        一昔营幕来，天明但平土。
+      </mt-text>
+    </mtBox>
+    <br>
+    <mtBox bg="#e7f1f5" border="true">
+      <mt-text type="paragraph">
+        金城留旬浃，兀兀醉歌舞。
+        出门览民风，惨惨愁肺腑。
+        去年夏秋旱，七月黍穟吐。
+        一昔营幕来，天明但平土。
+      </mt-text>
+    </mtBox>
+  </div>
 </template>
 
 <script>
