@@ -1,5 +1,5 @@
 <template>
-  <mtBox bg="lightblue" flip="true" border="true">
+  <mtBox bg="#e7f1f5" flip="true" border="true">
     123123
   </mtBox>
 </template>

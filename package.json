@@ -18,7 +18,8 @@
     "buildjs": "webpack --config ./webpack.component.js",
     "buildcss": "npx gulp sass",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "depoly": "bash deploy.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
