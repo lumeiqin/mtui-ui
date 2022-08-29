@@ -17,8 +17,8 @@ const install = function (Vue, opts = {}) {
     Vue.prototype.$isEmpty = mtUtils.isEmpty;
 };
 
-
-export default {
+const API = {
     install,
     mtBox,
-};
+}
+export default API;
