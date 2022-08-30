@@ -28,7 +28,7 @@ html, body {
 	* @param {Number} $px 尺寸
 */
 @function vw($px) {
-  @return $px/375*100vw;
+  @return calc(#{$px} / 375 * 100vw);
 }
 
 /**
@@ -60,8 +60,6 @@ html, body {
     color: #252525;
   }
 }
-
-
 
 
 /**
