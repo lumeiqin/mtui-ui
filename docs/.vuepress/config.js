@@ -24,6 +24,9 @@ module.exports = {
                     {
                         title: 'Box 容器',
                         path: '/componentDocs/mtBox'
+                    },{
+                        title: 'Text 文字',
+                        path: '/componentDocs/mtText'
                     }
                 ]
             },

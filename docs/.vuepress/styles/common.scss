@@ -8,73 +8,40 @@ $pagebg: #f7f7f7;
 $warncolor: #ff6f71;
 $warntxt: #ffb6a6;
 
-html, body, div, span, textarea, input {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html, body {
-  width: 100%;
-  height: 100vh;
-  overflow-y: auto;
-  background: $pagebg;
-  user-select: text;
-  font-family: Microsoft Yahei, Open Sans, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe UI, Arial, Roboto, PingFang SC, miui, Hiragino Sans GB, sans-serif;
-}
-
+//region @media
 /**
 	* 计算适配比
-	* @param {Number} $column 列数
-	* @param {String} $distance 列之间的距离（不加单位，默认为0）
+	* @param {Number} $px 尺寸（不加单位）
 */
-@function vw($px) {
-  @if $px == 0 {
-    @return 0;
-  } @else {
-    @return calc(#{$px} / 3.75) + vw;
-  }
+@function pxtovw($px) {
+  @return calc(#{$px} / 375 * 100vw);
 }
 
-/**
-	* 一行多列
-	* @param {Number} $column 列数
-	* @param {String} $distance 列之间的距离（不加单位，默认为0）
-*/
-@mixin column($column: 4, $distance: 0) {
-  @if $distance != 0 {
-    width: calc((100% - vw(#{$distance})) / #{$column});
-    margin-right: calc(vw(#{$distance}) / (#{$column} - 1)) + vw;
-  } @else {
-    width: calc(100% / #{$column});
+@mixin vw($px, $key: font-size) {
+  @media only screen and (max-width: 600px) {
+    #{$key}: pxtovw($px);
   }
-}
-
-/**
-	* @description 等宽等高
-	* @param {String} $size 宽度高度
-*/
-@mixin square-size($size: 50) {
-  width: vw($size);
-  height: vw($size);
+  @media only screen and (min-width: 601px) {
+    #{$key}: $px+px;
+  }
 }
 
 /**
 	* 字体全家桶
-	* @param {String} $size 字体大小（加单位，默认为30rpx）
-	* @param {String} $lineHeight 行高（加单位，默认为30rpx）
+	* @param {String} $size 字体大小（不加单位）
+	* @param {String} $lineHeight 行高（不加单位）
 	* @param {String} $weight 字体粗细（默认为normal）
 	* @param {String} $style 字体风格（默认为normal）
 	* @param {String} $family 字体类型（默认为Sans-serif）
 */
-@mixin font-set($size: 30rpx,$lineHeight: 30rpx, $weight: normal, $style: normal, $family: Sans-serif) {
+@mixin font-set($size: 15,$lineHeight: 15, $weight: normal, $style: normal, $family: Sans-serif) {
   font: {
-    size: $size;
     weight: $weight;
     style: $style;
     family: $family;
   }
-  line-height: $lineHeight;
+  @include vw($size);
+  @include vw($lineHeight, 'line-height');
 }
 
 @mixin font-color($type: title) {
@@ -93,6 +60,51 @@ html, body {
   #{$key}: $themecolor;
 }
 
+
+/**
+	* 一行多列
+	* @param {Number} $column 列数
+	* @param {String} $distance 列之间的距离（不加单位，默认为0）
+*/
+@mixin column($column: 4, $distance: 0) {
+  @if $distance != 0 {
+    width: calc((100% - #{$distance}) / #{$column});
+    margin-right: calc(#{$distance} / (#{$column} - 1)) + vw;
+  } @else {
+    width: calc(100% / #{$column});
+  }
+}
+
+/**
+	* @description 等宽等高
+	* @param {String} $size 宽度高度
+*/
+@mixin square-size($size: 50) {
+  @include vw($size, 'width');
+  @include vw($size, 'height');
+}
+
+//endregion @media
+
+
+//region reset-css
+html, body, div, span, textarea, input {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background: $pagebg;
+  user-select: text;
+  font-family: Microsoft Yahei, Open Sans, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe UI, Arial, Roboto, PingFang SC, miui, Hiragino Sans GB, sans-serif;
+  @include vw(16);
+}
+
+//endregion reset-css
 
 %flex-start {
   display: flex;

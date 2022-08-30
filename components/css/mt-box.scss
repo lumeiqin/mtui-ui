@@ -6,7 +6,7 @@
 
   &-main {
     width: 100%;
-    font-size: vw(16);
+    @include vw(16);
     color: #333;
   }
 

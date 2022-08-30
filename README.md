@@ -18,6 +18,6 @@ Vue.use(MTUI)
 
 // 按需引入
 import "mtui-vue/dist/css/mt-box.css";
-import MtBox from "mtui-vue";
-Vue.use(MtBox)
+import mtBox from "mtui-vue";
+Vue.use(mtBox)
 ```

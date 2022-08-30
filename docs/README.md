@@ -1,6 +1,8 @@
 # mtui-vue 组件库
 
-#### 初始化阶段，不定期更新组件
+#### 初始化阶段，不定期更新组件  :tada: :tada:
+
+*** 
 
 ### 1、安装组件库
 
@@ -18,6 +20,6 @@ Vue.use(MTUI)
 
 // 按需引入
 import "mtui-vue/dist/css/mt-box.css";
-import { MtBox } from "mtui-vue";
-Vue.use(MtBox)
+import mtBox from "mtui-vue";
+Vue.use(mtBox)
 ```

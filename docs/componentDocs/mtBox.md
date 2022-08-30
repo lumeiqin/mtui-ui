@@ -1,48 +1,52 @@
 # Box 容器
+***
+***
 
-
-
-#### 基本用法
-<mt-box>山有木兮木有枝，心悦君兮君不知。</mt-box>
+### 基本用法
+<mt-box>金城留旬浃，兀兀醉歌舞。</mt-box>
 
 ```html
-<mt-box>山有木兮木有枝，心悦君兮君不知。</mt-box>
+<mt-box>金城留旬浃，兀兀醉歌舞。</mt-box>
 ```
 
 
-#### 上下边框
-<mt-box border="true">山有木兮木有枝，心悦君兮君不知。</mt-box>
+### 上下边框
+<div style="margin: 20px 0">
+<mt-box border="true">金城留旬浃，兀兀醉歌舞。</mt-box>
+</div>
 
 ```html
-<mt-box border="true">山有木兮木有枝，心悦君兮君不知。</mt-box>
+<mt-box border="true">金城留旬浃，兀兀醉歌舞。</mt-box>
 ```
 
 
-#### 容器中内容居中
+### 容器中内容居中
 <mt-box center="true">
-<p>山有木兮木有枝，心悦君兮君不知。</p>
+<p>金城留旬浃，兀兀醉歌舞。</p>
 </mt-box>
 
 ```html
 <mt-box center="true">
-<p>山有木兮木有枝，心悦君兮君不知。</p>
+<p>金城留旬浃，兀兀醉歌舞。</p>
 </mt-box>
 ```
 
 
-#### 自定义背景
-<mt-box bg="#e7f1f5" border="true">山有木兮木有枝，心悦君兮君不知。</mt-box>
+### 自定义背景
+<div style="margin: 20px 0">
+<mt-box bg="#e7f1f5" border="true">金城留旬浃，兀兀醉歌舞。</mt-box>
+</div>
 
 ```html
-<mt-box bg="#e7f1f5" border="true">山有木兮木有枝，心悦君兮君不知。</mt-box>
+<mt-box bg="#e7f1f5" border="true">金城留旬浃，兀兀醉歌舞。</mt-box>
 ```
 
 
-#### 翻转容器
-<mt-box :flip="true">山有木兮木有枝，心悦君兮君不知。</mt-box>
+### 翻转容器
+<mt-box :flip="true">金城留旬浃，兀兀醉歌舞。</mt-box>
 
 ```html
-<mt-box :flip="true">山有木兮木有枝，心悦君兮君不知。</mt-box>
+<mt-box :flip="true">金城留旬浃，兀兀醉歌舞。</mt-box>
 ```
 
 ### Props
