@@ -1,6 +1,6 @@
 {
   "name": "mtui-vue",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "基于vue的ui库",
   "main": "dist/index.umd.js",
   "keywords": [
