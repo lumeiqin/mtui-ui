@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-button">
-    <button v-if="name === 'default'" class="mt-button--default" :disabled="isDisabled" :loading="loading"
+  <div style="width: 100%">
+    <button v-if="name === 'default'" class="mt-button mt-button--default" :disabled="isDisabled" :loading="loading"
             @click="btnClick" :style="{
 				'height': height,
 					'background': color,
@@ -9,7 +9,7 @@
       <slot></slot>
     </button>
 
-    <button v-else-if="name === 'hollow'" class="mt-button--hollow" :disabled="isDisabled" :loading="loading"
+    <button v-else-if="name === 'hollow'" class="mt-button mt-button--hollow" :disabled="isDisabled" :loading="loading"
             @click="btnClick" :style="{
 					'height': height,
 					'border': noBorder? 'none': '1px solid ' + color,
