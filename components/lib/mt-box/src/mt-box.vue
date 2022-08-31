@@ -17,7 +17,7 @@ export default {
     },
     padding: {
       type: String,
-      default: "4vw"
+      default: "15px"
     },
     flip: {
       type: [Boolean, String],
@@ -33,7 +33,7 @@ export default {
     },
     radius: {
       type: String,
-      default: "1vw"
+      default: "4px"
     }
   }
 }

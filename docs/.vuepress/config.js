@@ -27,6 +27,9 @@ module.exports = {
                     },{
                         title: 'Text 文字',
                         path: '/componentDocs/mtText'
+                    },{
+                        title: 'Button 按钮',
+                        path: '/componentDocs/mtButton'
                     }
                 ]
             },

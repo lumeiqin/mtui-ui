@@ -13,6 +13,10 @@ import mtText from "../components/lib/mt-text/index.js"
 Vue.component("mtText", mtText)
 Vue.use(mtText)
 
+import mtButton from "../components/lib/mt-button/index.js"
+Vue.component("mtButton", mtButton)
+Vue.use(mtButton)
+
 
 Vue.config.productionTip = false
 new Vue({

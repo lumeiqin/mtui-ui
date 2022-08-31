@@ -1,10 +1,12 @@
 import mtBox from "./mt-box/index.js";
 import mtText from "./mt-text/index.js";
+import mtButton from "./mt-button/index.js";
 import mtUtils from "./utils/index.js";
 
 const components = [
     mtBox,
-    mtText
+    mtText,
+    mtButton
 ];
 
 const install = function (Vue, opts = {}) {
@@ -22,6 +24,7 @@ const install = function (Vue, opts = {}) {
 const API = {
     install,
     mtBox,
-    mtText
+    mtText,
+    mtButton
 }
 export default API;

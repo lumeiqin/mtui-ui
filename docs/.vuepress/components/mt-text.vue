@@ -24,11 +24,11 @@ export default {
     },
     size: {
       type: String,
-      default: "4.27vw"
+      default: "16px"
     },
     lh: {
       type: String,
-      default: "8vw"
+      default: "30px"
     },
     fw: {
       type: [Number, String],
