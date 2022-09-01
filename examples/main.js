@@ -17,6 +17,10 @@ import mtButton from "../components/lib/mt-button/index.js"
 Vue.component("mtButton", mtButton)
 Vue.use(mtButton)
 
+import mtTag from "../components/lib/mt-tag/index.js"
+Vue.component("mtTag", mtTag)
+Vue.use(mtTag)
+
 
 Vue.config.productionTip = false
 new Vue({

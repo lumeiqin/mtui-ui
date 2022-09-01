@@ -30,6 +30,9 @@ module.exports = {
                     },{
                         title: 'Button 按钮',
                         path: '/componentDocs/mtButton'
+                    },{
+                        title: 'Tag 标签',
+                        path: '/componentDocs/mtTag'
                     }
                 ]
             },
