@@ -69,7 +69,7 @@ $warntxt: #ffb6a6;
 @mixin column($column: 4, $distance: 0) {
   @if $distance != 0 {
     width: calc((100% - #{$distance}) / #{$column});
-    margin-right: calc(#{$distance} / (#{$column} - 1)) + vw;
+    margin-right: calc(#{$distance} / (#{$column} - 1));
   } @else {
     width: calc(100% / #{$column});
   }
@@ -88,7 +88,7 @@ $warntxt: #ffb6a6;
 
 
 //region reset-css
-html, body, div, span, textarea, input {
+html, body, div, span, textarea, input, p {
   box-sizing: border-box;
   padding: 0;
   margin: 0;

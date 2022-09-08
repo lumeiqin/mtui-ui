@@ -1,5 +1,5 @@
-import watermark from "./watermark";
-import CryptoJS from './jsencrypt.min.js';
+import watermark from "./watermark.js";
+import {Toast} from "./Toast";
 
 const utils = {
 
@@ -97,7 +97,7 @@ const utils = {
 
 export default {
     watermark: watermark,
-    CryptoJS: CryptoJS,
+    toast: Toast,
     isEmpty: utils.isEmpty,
     formatDate: utils.formatDate
 }

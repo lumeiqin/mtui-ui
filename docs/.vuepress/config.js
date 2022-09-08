@@ -33,6 +33,9 @@ module.exports = {
                     },{
                         title: 'Tag 标签',
                         path: '/componentDocs/mtTag'
+                    },{
+                        title: 'Grid 宫格',
+                        path: '/componentDocs/mtGrid'
                     }
                 ]
             },
